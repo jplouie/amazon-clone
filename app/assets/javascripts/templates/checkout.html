@@ -1,0 +1,25 @@
+<div>
+  <p><u>Shopping Cart</u></p>
+  <table>
+    <tr>
+      <th>Quantity</th>
+      <th>Item</th>
+      <th>Price</th>
+    </tr>
+    <tr ng-repeat='obj in cart'>
+      <td>{{obj.quantity}}</td>
+      <td>{{obj.item.name}}</td>
+      <td>${{obj.item.price * obj.quantity}}</td>
+    </tr>
+    <tr>
+      <td>Subtotal</td>
+      <td></td>
+      <td>${{subtotal}}</td>
+    </tr>
+  </table>
+  <div>
+    Name: <input type='text' ng-model='cart.name'><br>
+    <button ng-click='purchase()'>Purchase</button>
+    <p ng-hide='status'>{{message}}</p>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div>
+  <div ng-repeat='item in items' class='item-list'>
+    <p>{{item.name}}</p>
+    <p>Price: ${{item.price}}</p>
+    <img ng-src='{{item.url}}'/>
+    <p>Quantity available: {{item.quantity}}</p>
+    <i class='fa fa-shopping-cart fa-3x' ng-click='add(item)'></i>
+  </div>
+  <button ng-click='checkout()'>Checkout</button><br>
+  <button ng-click='pastOrders()'>View Past Orders</button>
+</div>

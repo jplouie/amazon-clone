@@ -1,0 +1,12 @@
+<h3>All Completed Orders</h3>
+<table>
+  <tr>
+    <th>Customer Name</th>
+    <th>Total</th>
+  </tr>
+  <tr ng-repeat='order in orders'>
+    <td>{{order.person}}</td>
+    <td>${{order.cost}}</td>
+  </tr>
+</table>
+<button ng-click='home()'>View Items</button>

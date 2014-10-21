@@ -3,7 +3,15 @@ var app = angular.module('amazonApp', ['ngResource', 'ngRoute']);
 app.config(function($routeProvider){
   $routeProvider
     .when('/', {
-      templateUrl: "<%= asset_path('angular/templates/items.html') %>",
+      templateUrl: "<%= asset_path('assets/templates/items.html') %>",
       controller: 'ItemController'
+    })
+    .when('/checkout', {
+      templateUrl: "<%= asset_path('assets/templates/checkout.html') %>",
+      controller: 'CheckoutController'
+    })
+    .when('/viewOrders', {
+      templateUrl: "<%= asset_path('assets/templates/orders.html') %>",
+      controller: 'OrderController'
     });
 });
